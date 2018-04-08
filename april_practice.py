@@ -55,5 +55,3 @@ def is_square(n):
     #     return round(math.sqrt(n), 2) == round(math.sqrt(n))
 
     return n>0 and (n**0.5).is_integer()
-
-print(is_square(100))
