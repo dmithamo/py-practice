@@ -1,3 +1,5 @@
+import math # For challenges requiring the math module, e.g #3
+
 """
 1.
 
@@ -31,7 +33,28 @@ def get_middle(s):
     else:
         return "{}".format(s[len(s)//2])
 
-print(get_middle("testing"))
-print(get_middle("middle"))
-print(get_middle("of"))
-         
+"""
+4.
+
+A square of squares
+
+You like building blocks. You especially like building blocks 
+that are squares. And what you even like more, is to arrange them into 
+a square of square building blocks!
+
+However, sometimes, you can't arrange them into a square. 
+Instead, you end up with an ordinary rectangle! Those blasted things! If you just had a 
+way to know, whether you're currently working in vain… Wait! That's it! You just 
+have to check if your number of building blocks is a perfect square.
+"""
+
+def is_square(n):
+    if n < 0:
+        return False
+    else:
+        return round(math.sqrt(n), 2) == round(math.sqrt(n))
+
+print(is_square(-100))
+print(is_square(10))
+print(is_square(4))
+
