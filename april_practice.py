@@ -49,9 +49,5 @@ have to check if your number of building blocks is a perfect square.
 """
 
 def is_square(n):
-    # if n < 0:
-    #     return False
-    # else:
-    #     return round(math.sqrt(n), 2) == round(math.sqrt(n))
+    return n > 0 and (n**0.5).is_integer()
 
-    return n>0 and (n**0.5).is_integer()
