@@ -69,3 +69,16 @@ def get_count(input_str):
             num_vowels += 1
     return num_vowels
 
+
+"""
+6. 
+Given an array, find the int that appears an odd number of times.
+
+There will always be only one integer that appears an odd number of times.
+"""
+
+def find_it(seq):
+    seq_count = {element: seq.count(element) for element in seq}
+    for k, v in seq_count.items():
+        if v % 2 != 0:
+            return k
