@@ -51,3 +51,21 @@ have to check if your number of building blocks is a perfect square.
 def is_square(n):
     return n > 0 and (n**0.5).is_integer()
 
+"""
+5.
+
+Return the number (count) of vowels in the given string.
+
+We will consider a, e, i, o, and u as vowels for this Kata.
+
+The input string will only consist of lower case letters and/or spaces.
+
+"""
+def get_count(input_str):
+    num_vowels = 0
+    vowels = "aeiouAEIOU"
+    for letter in input_str:
+        if letter in vowels:
+            num_vowels += 1
+    return num_vowels
+
