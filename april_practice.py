@@ -82,3 +82,22 @@ def find_it(seq):
     for k, v in seq_count.items():
         if v % 2 != 0:
             return k
+
+
+"""
+7. 
+Stop gninnipS My sdroW!
+
+Write a function that takes in a string of one or more words, and 
+returns the same string, but with all five or more letter words reversed 
+(Just like the name of this Kata). 
+Strings passed in will consist of only letters and spaces. Spaces will be included only when more than 
+one word is present.
+"""
+def spin_words(sentence):
+    words = sentence.split(" ")
+    for i, word in enumerate(words):
+        if len(words[i]) >= 5:
+            words[i] = word[::-1]
+    return " ".join(words)
+
